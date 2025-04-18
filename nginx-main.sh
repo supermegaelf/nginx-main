@@ -1,7 +1,7 @@
 #!/bin/bash
 
-read -p "Marzban Dashboard: " DASHBOARD_DOMAIN
-read -p "Sub-Site domain: " SUB_DOMAIN
+read -p $'\033[32mMarzban Dashboard: \033[0m' DASHBOARD_DOMAIN
+read -p $'\033[32mSub-Site domain: \033[0m' SUB_DOMAIN
 
 apt update && apt install curl gnupg2 ca-certificates lsb-release -y
 curl -fsSL https://nginx.org/keys/nginx_signing.key | apt-key add -
